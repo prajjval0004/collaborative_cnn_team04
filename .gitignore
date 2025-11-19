@@ -1,5 +1,8 @@
 data/
-*.pth
 *.h5
+*.pth
 __pycache__/
 .ipynb_checkpoints/
+.DS_Store
+
+!models/model_v1.pth
