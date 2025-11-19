@@ -1,9 +1,10 @@
-# Collaborative CNN Project - Cats vs Dogs
+# collaborative_cnn_team04
 
-This repository is for our deep learning assignment.
+Fork-based collaborative CNN project for Cats vs Dogs classification.
 
-- Task: Image classification (cats vs dogs)
-- User 1: Subhadeep Paul - using the TongPython cats vs dogs dataset
-- User 2: Prajjval Govil - using another cats vs dogs dataset
+- **User 1 (SUbhadeep) dataset:** Cat & Dog Dataset (Tong Python)  
+  https://www.kaggle.com/datasets/tongpython/cat-and-dog
 
-We will each train a CNN model on our own dataset and test how well the models work on each other’s data.
+This repository follows the assignment "Fork-Based Collaborative CNN Development"
+with separate datasets for User 1 and User 2 and GitHub-based collaboration
+(branches, PRs, issues and cross-dataset testing).
