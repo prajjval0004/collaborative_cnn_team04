@@ -43,7 +43,7 @@ jobs:
 
           missing = [f for f in required_files if not os.path.exists(f)]
           if missing:
-              print("❌ Missing files:")
+              print("Missing files:")
               for m in missing:
                   print("  -", m)
               sys.exit(1)
@@ -60,7 +60,7 @@ jobs:
                   with open(path, "r") as f:
                       json.load(f)
               except Exception as e:
-                  print(f"❌ Invalid JSON in {path}: {e}")
+                  print(f"Invalid JSON in {path}: {e}")
                   sys.exit(1)
 
           print("✅ All required files present and JSON files are valid.")
