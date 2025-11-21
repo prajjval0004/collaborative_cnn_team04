@@ -1,0 +1,41 @@
+name: Validate Repository Structure
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Validate Repo Structure
+        run: |
+          echo "Checking required files..."
+
+          test -f models/model_v1.py
+          test -f models/model_v2.pth
+          test -f notebooks/train_v1.ipynb
+          test -f notebooks/test_v1_user2.ipynb
+          test -f results/metrics_v1.json
+          test -f results/test_v1_user2.json
+          test -f results/test_v2_user1.json
+          test -f reports/report.md
+
+          echo "Structure OK!"
+
+      - name: Validate Metrics Format
+        run: |
+          python3 - <<EOF
+          import json, sys
+
+          f = open("results/metrics_v1.json")
+          data = json.load(f)
+
+          if not isinstance(data, dict):
+              sys.exit("metrics_v1.json must be a dictionary")
+
+          print("metrics_v1.json OK!")
+          EOF

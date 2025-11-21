@@ -1,0 +1,6 @@
+{
+    "model": "model_v2",
+    "tested_on": "User1 dataset",
+    "accuracy": 0.8423133959466139,
+    "total_samples": 2023
+}
